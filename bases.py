@@ -484,22 +484,209 @@ triangle_mirroir_inverse(4)
 #    +
 
 
+#Définition Procédure "Triangle Iso"
+#   Paramètres:
+#       nombre_de_lignes : type entier
+#   Variables:
+#       i : type entier
+#       j : type entier
+#       chaine : type chaine de caractères
+#
+#   DébutProcédure
+#       Pour i allant de 0 à nombre_de_lignes
+#       |   chaine <- chaine vide
+#       |   Pour j allant de nombre_de_lignes - i -1 à 0 par pas de -1
+#       |   |   chaine <- chaine + " "
+#       |   FinPour
+#       |   Pour k allant de 0 à i*2 + 1
+#       |   |   chaine <- chaine + "+"
+#       |   FinPour
+#       |   afficher chaine
+#       FinPour
+#   FinProcédure
+#Fin Définition Procédure "Triangle Iso"
+def triangle_iso(nombre_de_lignes):
+     for i in range (0, nombre_de_lignes):
+        chaine = ""
+        for j in range(nombre_de_lignes-i-1,0,-1):
+            chaine = chaine + " "
+        for k in range(0,i*2 + 1):
+            chaine = chaine + "+"
+        print chaine
 
-def triangle_iso(nombre_de_ligne):
-    pass
 #   +
 #  +++
 # +++++
-def triangle_iso_inverse(nombre_de_ligne):
-    pass
-# +++++
-#  +++
-#   +
-def losange(nombre_de_ligne):
-    pass
-#   +
-#  +++
-# +++++
-#  +++
-#   + 
+print "Triangle ISO" 
+triangle_iso(3)
 
+#Définition Procédure "Triangle Iso Inverse"
+#   Paramètres:
+#       nombre_de_lignes : type entier
+#   Variables:
+#       i : type entier
+#       j : type entier
+#       chaine : type chaine de caractères
+#
+#   DébutProcédure
+#       Pour i allant de 0 à nombre_de_lignes
+#       |   chaine <- chaine vide
+#       |   Pour j allant de 0 à i
+#       |   |   chaine <- chaine + " "
+#       |   FinPour
+#       |   Pour k allant de 0 à (nombre_de_lignes -i)*2 -1
+#       |   |   chaine <- chaine + "+"
+#       |   FinPour
+#       |   afficher chaine
+#       FinPour
+#   FinProcédure
+#Fin Définition Procédure "Triangle Iso Inverse"
+def triangle_iso_inverse(nombre_de_lignes):
+      for i in range (0, nombre_de_lignes):
+        chaine = ""
+        for j in range(0,i):
+            chaine = chaine + " "
+        for k in range((nombre_de_lignes -i)*2 - 1):
+            chaine = chaine + "+"
+        print chaine
+
+# +++++
+#  +++
+#   +
+print "Triangle ISO Inverse"
+triangle_iso_inverse(3)
+
+#Définition Procédure "Losange"
+#   Paramètres:
+#       cote : type entier
+#   Variables:
+#       i : type entier
+#       j : type entier
+#       chaine : type chaine de caractères
+#   Utilise:
+#       TRIANGLE_ISO : type Procedure "Triangle Iso"
+#
+#   DébutProcédure
+#       TRIANGLE_ISO
+#       Pour i allant de 1 à cote
+#       |   chaine <- chaine vide
+#       |   Pour j allant de 0 à i
+#       |   |   chaine <- chaine + " "
+#       |   FinPour
+#       |   Pour k allant de 0 à (cote -i)*2 -1
+#       |   |   chaine <- chaine + "+"
+#       |   FinPour
+#       |   afficher chaine
+#       FinPour
+#   FinProcédure
+#Fin Définition Procédure "Losange"
+def losange(cote):
+    triangle_iso(cote)
+    for i in range (1, cote):
+        chaine = ""
+        for j in range(0,i):
+            chaine = chaine + " "
+        for k in range((cote -i)*2 - 1):
+            chaine = chaine + "+"
+        print chaine
+
+print "Losange"
+losange(3)
+#   +
+#  +++
+# +++++
+#  +++
+#   +
+losange(6)
+
+
+#Définition Procédure "Tables de multiplications"
+#   Paramètres:
+#       entier : type entier
+#   Variables:
+#       tables : type entier
+#       multiplicateur : type entier
+#       resultat : type string
+#
+#   DébutProcédure:
+#       POURCHAQUE tables compris entre  O et entier
+#       |   POURCHAQUE multiplicateur compris entre 0 et entier
+#       |   |   résultat <- tables * multiplicateur
+#       |   |   afficher tables * multiplicateur = résultat
+#       |   FinPOURCHAQUE
+#       FinPOURCHAQUE
+#   FinProcédure
+#Fin Définition Procédure "Tables de Multiplications"
+def tables_multiplications(entier):
+    for tables in range(0,entier+1):
+        for multiplicateur in range(0,entier+1):
+            resultat= tables * multiplicateur
+            print str(tables)+"*"+str(multiplicateur) +"=" + str(resultat)
+
+print "Tables de multiplications"
+tables_multiplications(10)
+
+
+#Début Définition Procédure "Fizz Buzz"
+#   Paramètres:
+#       nombre : type entier
+#   
+#   DébutProcédure
+#   |   SI nombre divisible par 3 et nombre disivible par 5
+#   |   |   afficher "FizzBuzz"
+#   |   |   retour
+#   |   FinSI
+#   |   SI nombre divisible par 5
+#   |   |   afficher "Buzz"
+#   |   |   retour
+#   |   FinSI
+#   |   SI nombre divisible par 3
+#   |   |   afficher "Fizz"
+#   |   |   retour
+#   |   FinSI
+#   FinProcédure
+#Fin Définition Procédure "Fizz Buzz"
+def fizz_buzz(nombre):
+    if nombre % 3 == 0 and nombre % 5 == 0:
+        print "FizzBuzz"
+        return
+    if nombre % 5 == 0:
+        print "Buzz"
+        return
+    if nombre % 3 == 0:
+        print "Fizz"
+        return
+
+fizz_buzz(3)
+fizz_buzz(5)
+fizz_buzz(15)
+
+#Définition Procédure "Code de caesar"
+#   Paramètres:
+#       mot : type chaine de charactère
+#       char : type charactère
+#   Variables:
+#       retour : type chaine de charactère
+#       c : type charactère
+#       cprime : type entier
+#   Fonctions:
+#       Ordinal : renvoie un entier correspondant au charactère paramètre
+#       Character : Convertie un entier paramètre en charactère
+#
+#   DébutProcédure
+#   |   retour <- chaine vide
+#   |   POURCHAQUE c dans mot
+#   |   |   cprime <- (Ordinal(c) - Ordinal(char)) % 26 + Ordinal(char)
+#   |   |   retour <- retour + Character(cprime)
+#   |   FinPOURCHAQUE
+#   |   afficher retour
+#   FinProcédure
+#Fin Définition Procédure "Code de Caésar"
+def code_de_caesar(mot,char):
+    retour = ""
+    for c in mot:
+        cprime = (ord(c)- ord(char)) % 26 + ord('a')
+        retour += chr(cprime)
+    print retour
+
+code_de_caesar("caesar",'c')
