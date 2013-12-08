@@ -43,8 +43,8 @@ def afficherMatrice(matrice):
     print "|"+str(matrice[0][0]) +" "+str(matrice[0][1])+"|"
     print "|"+str(matrice[1][0]) +" "+str(matrice[1][1])+"|"
 
-matrice = [[4,5],[6,7]]
-afficherMatrice(matrice)
+MATRICE = [[4,5],[6,7]]
+afficherMatrice(MATRICE)
 
 def is_premier(n):
     diviseur = 2
