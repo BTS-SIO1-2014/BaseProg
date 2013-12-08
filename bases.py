@@ -38,8 +38,8 @@ def ma_procedure():
 
 #Les conditions sont des fonctions ou une suite d'opérations renvoyant un type booléen True ou False
 
-var1 = True;
-var2 = False;
+var1 = True
+var2 = False
 
 var1 or var2 #Ceci est une condition
 
@@ -60,9 +60,9 @@ def condition():
 #En python
 
 if (condition()): 
-   pass 
+    pass 
 else:
-   pass # Dans notre cas la fonction condition renvoie False, donc on passe dans 
+    pass # Dans notre cas la fonction condition renvoie False, donc on passe dans 
         # le bloc else
 
 
@@ -130,8 +130,8 @@ while(condition()):
 # L'éléments est un objet de la collection (liste,dictionnaires,map,set...)
 # En python pour et pourchaque sont similaire:
 
-for i in {0,1,2}:
-    print i # affiche 0
+for h in {0, 1, 2}:
+    print h # affiche 0
             #         1
             #         2
 
@@ -214,7 +214,7 @@ def rectangle_plein(largeur,hauteur):
         print chaine
 
 print "Rectangle plein"
-rectangle_plein(4,2)
+rectangle_plein(4, 2)
 
 
 #Définition Procédure "Rectangle Creux"
@@ -252,27 +252,27 @@ rectangle_plein(4,2)
 #   FinProcédure
 #FinDéfinition Procédure "Rectangle Creux"
 def rectangle_creux(largeur,hauteur):
-    if hauteur <3 or largeur < 3:
+    if hauteur < 3 or largeur < 3:
         raise Exception("Paramètre non valide")
     chaine = ""
-    for k in range (1,largeur+1):
+    for k in range (1, largeur+1):
         chaine = chaine + "+"
     print chaine
     for i in range (2, hauteur):
         chaine = "+"
-        for j in range (1,largeur-1):
+        for j in range (1, largeur-1):
             chaine = chaine + " "
         chaine = chaine + "+"
         print chaine
     chaine = ""
-    for k in range (1,largeur+1):
+    for k in range (1, largeur+1):
         chaine = chaine + "+"
     print chaine
 
 print "Rectangle creux 1"
-rectangle_creux(3,3)
-rectangle_creux(4,3)
-rectangle_creux(5,5)
+rectangle_creux(3, 3)
+rectangle_creux(4, 3)
+rectangle_creux(5, 5)
 
 
 #Définition Procédure "Afficher Ligne"
@@ -293,7 +293,7 @@ rectangle_creux(5,5)
 #FinDéfinition Procédure "Afficher Ligne"
 def afficher_ligne(largeur):
     chaine = ""
-    for k in range (1,largeur+1):
+    for k in range (1, largeur+1):
         chaine = chaine + "+"
     print chaine
 
@@ -327,19 +327,19 @@ def afficher_ligne(largeur):
 #   FinProcédure
 #FinDéfinition Procédure "Rectangle Creux 2"
 def rectangle_creux2(largeur,hauteur):
-    if hauteur <3 or largeur < 3:
+    if hauteur < 3 or largeur < 3:
         raise Exception("Paramètre non valide")
     afficher_ligne(largeur)
     for i in range (2, hauteur):
         chaine = "+"
-        for j in range (1,largeur-1):
+        for j in range (1, largeur-1):
             chaine = chaine + " "
         chaine = chaine + "+"
         print chaine
     afficher_ligne(largeur)
 
 print "Rectangle Creux 2"
-rectangle_creux2(6,3)
+rectangle_creux2(6, 3)
 
 
 #Définition Procédure "Carrer Plein"
@@ -354,7 +354,7 @@ rectangle_creux2(6,3)
 #
 #FinDéfinition Procédure "Carrer Plein"
 def carre_plein(cote):
-    rectangle_plein(cote,cote)
+    rectangle_plein(cote, cote)
 
 print "Carré plein"
 carre_plein(4)
@@ -371,7 +371,7 @@ carre_plein(4)
 #
 #FinDéfinition Procédure "Carrer Plein"
 def carre_creux(cote): # minimum cote 3
-    rectangle_creux2(cote,cote)
+    rectangle_creux2(cote, cote)
 
 print "Carré Creux"
 carre_creux(4)
