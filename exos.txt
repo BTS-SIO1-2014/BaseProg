@@ -1,0 +1,223 @@
+Exercice 0:
+Ecrire une fonction initialiser_tableau(n) qui renvoie un tableau avec n entier aléatoire compris entre 1 et 10 inclus.
+Ex:
+T = initialiser_tableau(10)
+print(T) # affiche [7,2,3,5,5,2,3,8,9,1] par exemple
+print(len(T)) # affiche obligatoirement 10
+
+Exercice 00: 
+Ecrire une fonction somme_des_tableaux(tab1,tab2) qui calcul la somme de chaque éléments de deux tableaux et renvoie un tableau. Vous devez gerer par une execption le cas ou
+les deux tableaux ne sont pas de longueur égale.
+Ex:
+T1 = [1,2,3]
+T2 = [2,3,5]
+S = somme_des_tableaux(tab1,tab2) # 1+2 , 2+3, 3+5 
+print(s) # affiche [3,5,8]
+
+Exercice 000:
+Ecrire une fonction swap_tableaux(index1,index2,tableau) qui échange (swap en anglais) les valeurs des éléments situés à l'index 1 par l'index 2 (et inversement).
+Ex:
+T2 = [2,3,5]
+swap_tableaux(0,2,T2)
+print(T2) # affiche [5,3,2]
+
+Exercice 0000:
+Ecrire une fonction permutation_circulaire(x,y,z) qui effectue une permutation circulaire des valeurs (ie Z=Y, Y=X, X=Z)
+Ex:
+x=2,y=3,z=5
+permutation_circulaire(x,y,z)
+print(x,y,z) # affiche 5,2,3
+
+Exercice 00000:
+Ecrire une fonction division_par_boucle(x,y) qui calcul x/y SANS utiliser l'opérateur /. (Astuce dans le nom de la fonction)
+
+
+Exercice 1:
+Ecrire une fonction meteo_des_plages() qui demande à l’utilisateur la température
+de l’air (Tair), celle de l’eau (Teau) et la force du vent (entier >= 0), puis en fonction de ces
+données affiche :
+– ”baignade interdite” si la force du vent est supérieure `a 7 ;
+– ”baignade d´econseillée” si la force du vent est supérieure à 5 et inférieure ou égale à 7 ;
+– sinon :
+– si Tair>=30 et Teau>=20 : ”baignade très agréable” ;
+– si Tair>=30 et Teau<15 : ”Risque d’hydrocution” ;
+– si Tair<10 et Teau>=20 : ”Attention à la sortie de l’eau” ;
+– si Tair<10 et Teau<10 : ”bain du 1er janvier ?”.
+
+
+Exercice 2:
+Ecrire une fonction signe_du_produit() qui demande deux nombres à l’utilisateur et l’informe ensuite si le produit est
+négatif ou positif (on inclut cette fois le traitement du cas où le produit peut être nul). Attention
+toutefois, on ne doit pas calculer le produit !
+
+Exercice 3:
+Un magasin de reprographie facture 0,10 E les dix premières photocopies, 0,09 E les vingt suivantes
+et 0,08 E au-delà.
+Ecrire une fonction calcul_facture() qui demande à l’utilisateur le nombre de photocopies
+effectuées et qui affiche la facture correspondante.
+
+Exercice 4:
+On considère le problème suivant : 
+• On lance une balle d'une hauteur initiale de 300 cm. 
+• On suppose qu'à chaque rebond, la balle perd 10 % de sa hauteur.
+• On cherche à savoir le nombre de rebonds nécessaire pour que la hauteur de la balle soit 
+inférieure ou égale à 10 cm. 
+Écrire une fonction nombre_de_rebond() permettant de résoudre ce problème. 
+
+
+Exercice 5:
+Ecrivez une fonction nombre_de_voyelles()
+qui demande une phrase à l’utilisateur et qui affiche à l’écran le nombre de voyelles contenues dans cette phrase.
+
+Exercice 6:
+Écrire le programme du jeu du pendu. 
+Le principe est le suivant:
+Un premier joueur entre un mot
+Le programme affiche autant de signe '_' que de lettre
+Le deuxième joueur propose des lettres jusqu'à ce qu'il ait trouvé le mot ou qu'il ait perdu (nombre d'essais > nombre de lettres)
+A chaque essais le programme affiche le mot avec les lettres découvertes ainsi que les lettres déjà annoncées et le nombre d'erreurs:
+Ex:
+"Entrez un mot": magie
+_ _ _ _ _ , , O erreurs
+"Entrer une lettre": a
+_ a _ _ _ , a, O erreurs
+"Entrer une lettre": b
+_ a _ _ _ , ab, 1 erreurs
+
+Si vous êtes en mode console (Affiche un warning sur IDLE) utilisez
+import getpass
+mot = getpass.getpass("Entrez un mot:") 
+Cela masquera le mot.
+
+Exercice 7:
+AI. 
+On souhaite programmer des comportements simples d'intelligence artificiel(AI). 
+On dispose de la structure suivantes:
+[x,y,velocité]
+avec x,y : la position dans le 'monde', et velocité, la vitesse de déplacement. (positive ou nulle, JAMAIS négative)
+On suppose pour l'instant que la cible ne bouge pas.
+(pensez à réutiliser les fonctions au fur et à mesure de l'exercice).
+
+Exercice 7.0:
+Ecrire une fonction aller_vers(joueur, cible) cette fonction modifie la position du joueur en fonction de sa vélocité en direction de sa cible
+(le joueur se déplace de sa vélocité sur x,y afin de réduire la distance x,y vers la cible)
+
+Ex:
+mob1 = [5,4,0]
+joueur = [5,0,+2]
+aller_vers(joueur,mob1)
+print(joueur) # affiche [5,2,2]
+
+Ex2:
+mob1 = [2,4,0]
+joueur = [5,0,+2]
+aller_vers(joueur,mob1)
+print(joueur) # affiche [3,2,2]
+
+Exercice 7.1:
+Ecrire une fonction fuir(joueur, cible) cette fonction modifie la position du joueur en fonction de sa vélocité à l'opposé de sa cible
+(le joueur se déplace de sa vélocité sur x,y afin de réduire la distance x,y en oposition de sa la cible)
+
+Ex:
+mob1 = [5,4,0]
+joueur = [5,0,+2]
+fuir(joueur,mob1)
+print(joueur) # affiche [7,6,2]
+
+Exercice 7.2:
+Ecrire une fonction atteindre_cible(joueur,cible) qui atteind spécifiquement la cible au bout d'un certain nombre d'étapes.
+Atteindre cible ne peut modifier la vélocité que de +1/-1 par appel (augmentation/diminution progressive).
+La vélocité maximum est de 5.
+mob1 = [5,4,0]
+joueur = [5,0,+3]
+atteindre_cible(joueur,mob1)
+print(joueur) # affiche [5,3,2]
+atteindre_cible(joueur,mob1)
+print(joueur) # affiche [5,5,1]
+atteindre_cible(joueur,mob1)
+print(joueur) # affiche [5,4,0] # cible atteinte !
+atteindre_cible(joueur,mob1)
+print(joueur) # affiche [5,4, 0] # donc il ne se passe plus rien
+
+Exercice 7.3:
+Ecrire une fonction patrouiller_entre_deux_points(mob1) qui va faire patrouiller un monstre entre deux points fixe (variable globale).
+mob1 = [5,4,0]
+point1 = [5,5,0]
+point2 = [4,2,0]
+patrouiller_entre_deux_points(mob1)
+print(mob1) # affiche [5,4,1]
+patrouiller_entre_deux_points(mob1)
+print(mob1) # affiche [5,5,0]
+patrouiller_entre_deux_points(mob1)
+print(mob1) # affiche [5,5,1]
+patrouiller_entre_deux_points(mob1)
+print(mob1) # affiche [4,4,1]
+patrouiller_entre_deux_points(mob1)
+print(mob1) # affiche [4,3,1]
+patrouiller_entre_deux_points(mob1)
+print(mob1) # affiche [4,2,0]
+patrouiller_entre_deux_points(mob1)
+print(mob1) # affiche [4,2,1]
+patrouiller_entre_deux_points(mob1)
+print(mob1) # affiche [5,3,1]
+patrouiller_entre_deux_points(mob1)
+print(mob1) # affiche [5,4,1]
+patrouiller_entre_deux_points(mob1)
+print(mob1) # affiche [5,5,0]
+...
+
+Exercice 7.4:
+Ecrire une fonction suivre(joueur1,joueur2) qui va faire bouger le joueur2 en fonction du joueur 1. 
+Le joueur 2 se rapproche du joueur 1 jusqu'a une distance de 1.
+Le joueur 2 s'aligne sur x ou y le plus tôt possible.
+
+cible = [9,100,0]
+joueur1 = [5,5,+2]
+joueur2 = [4,0,0]
+aller_vers(joueur1,cible)
+print(joueur1) # affiche [7,7,2]
+suivre(joueur1,joueur2)
+print(joueur2) # affiche [4,0,1]
+
+aller_vers(joueur1,cible)
+print(joueur1) # affiche [9,9,2]
+suivre(joueur1,joueur2)
+print(joueur2) # affiche [5,1,2]
+
+aller_vers(joueur1,cible)
+print(joueur1) # affiche [9,11,2]
+suivre(joueur1,joueur2)
+print(joueur2) # affiche [7,3,2]
+
+aller_vers(joueur1,cible)
+print(joueur1) # affiche [9,13,2]
+suivre(joueur1,joueur2)
+print(joueur2) # affiche [9,5,3]
+
+aller_vers(joueur1,cible)
+print(joueur1) # affiche [9,15,2]
+suivre(joueur1,joueur2)
+print(joueur2) # affiche [9,8,4]
+
+aller_vers(joueur1,cible)
+print(joueur1) # affiche [9,17,2]
+suivre(joueur1,joueur2)
+print(joueur2) # affiche [9,12,4]
+
+aller_vers(joueur1,cible)
+print(joueur1) # affiche [9,19,2]
+suivre(joueur1,joueur2)
+print(joueur2) # affiche [9,16,3]
+
+aller_vers(joueur1,cible)
+print(joueur1) # affiche [9,21,2]
+suivre(joueur1,joueur2)
+print(joueur2) # affiche [9,19,2]
+
+aller_vers(joueur1,cible)
+print(joueur1) # affiche [9,23,2]
+suivre(joueur1,joueur2)
+print(joueur2) # affiche [9,22,2]  # en mode suiveur
+
+
+
