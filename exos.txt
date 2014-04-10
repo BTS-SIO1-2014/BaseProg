@@ -13,8 +13,8 @@ deux tableaux ne sont pas de longueur égale par une exception.
 Ex:
 T1 = [1,2,3]
 T2 = [2,3,5]
-S = somme_des_tableaux(tab1,tab2) # 1+2 , 2+3, 3+5 
-print(s) # affiche [3,5,8]
+S = somme_des_tableaux(T1,T2) # 1+2 , 2+3, 3+5 
+print(S) # affiche [3,5,8]
 
 Exercice 000:
 Ecrire une fonction swap_tableaux(index1,index2,tableau) qui échange 
@@ -29,8 +29,10 @@ Exercice 0000:
 Ecrire une fonction permutation_circulaire(x,y,z) qui effectue une permutation 
 circulaire des valeurs (ie Z=Y, Y=X, X=Z)
 Ex:
-x=2,y=3,z=5
-permutation_circulaire(x,y,z)
+x=2
+y=3
+z=5
+x,y,z = permutation_circulaire(x,y,z)
 print(x,y,z) # affiche 5,2,3
 
 Exercice 00000:
