@@ -63,6 +63,11 @@ Un magasin de reprographie facture 0,20 E les dix premières photocopies, 0,10E
 les vingt suivantes et 0,08 E au-delà.
 Ecrire une fonction calcul_facture() qui demande à l’utilisateur le nombre de 
 photocopies effectuées et qui affiche la facture correspondante.
+Ex : pour 40 photocopies
+f = 10 * 0,20 + 20 * 0.10 + 10 * 0.08
+
+Ex : pour 5 photocopies
+f = 5 * 0,20
 
 Exercice 4:
 On considère le problème suivant : 
