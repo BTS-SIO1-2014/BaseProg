@@ -35,7 +35,8 @@ print(x,y,z) # affiche 5,2,3
 
 Exercice 00000:
 Ecrire une fonction division_par_boucle(x,y) qui calcul x/y SANS utiliser 
-l'opérateur /. (Astuce dans le nom de la fonction)
+l'opérateur /. (Astuce dans le nom de la fonction).On souhaite avoir au minimum
+2 chiffres après la virgule (1/3 = 0.33)
 
 Exercice 1:
 Ecrire une fonction meteo_des_plages() qui demande à l’utilisateur la 
@@ -55,7 +56,7 @@ Exercice 2:
 Ecrire une fonction signe_du_produit() qui demande deux nombres à l’utilisateur
 et l’informe ensuite si le produit est négatif ou positif (on inclut cette fois
 le traitement du cas où le produit peut être nul). Attention
-toutefois, on ne doit pas calculer le produit !
+toutefois, on ne doit pas calculer le produit ! (ie pas de * dans la fonction)
 
 Exercice 3:
 Un magasin de reprographie facture 0,20 E les dix premières photocopies, 0,10E
